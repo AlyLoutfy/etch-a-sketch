@@ -14,9 +14,14 @@
   </div>
 
   <div class="container">
-    <div class="options"></div>
-    <div class="grid" style="grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);"></div>
+    <div class="options">
+      <input class="color-picker" type="color" value="#43da85">
+      <button class="clear-btn">Clear</button>
+      <input type="range" value="16" max="64" onchange="changeRange(this.value)">
+      <p class="grid-size">Grid Size: 16 x 16 </p>
+    </div>
+
+    <div class="grid"></div>
   </div>
   <script src="script.js"></script>
 </body>

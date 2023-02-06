@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #333;
+  background-color: #222222;
 }
 
 .header {
@@ -12,15 +12,72 @@ body {
 
 .container {
   display: flex;
+  justify-content: flex-start;
+  gap: 120px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 50px;
+}
+
+.color-picker {
+  width: 110px;
+  height: 110px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.clear-btn {
+  width: 100px;
+  height: 40px;
+  color: black;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 90%;
+  height: 2px;
+  background: #404040;
+  appearance: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.grid-size {
+  margin-top: -20px;
+  color: white;
+}
+
+.color-picker::-webkit-color-swatch {
+  border-radius: 15px;
+  border: none;
+}
+
+.color-picker::-moz-color-swatch {
+  border-radius: 15px;
+  border: none;
 }
 
 .grid {
   display: grid;
   width: 500px;
   height: 500px;
-  border-radius: 10px;
   background-color:white;
+}
+
+.grid-blocks {
+  border-top: 1px solid #918f8f;
+  border-left: 1px solid #918f8f;
 }
 
 .grid-blocks:hover {
