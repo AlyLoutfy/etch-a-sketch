@@ -16,9 +16,11 @@ const colorPicker = document.querySelector(".color-picker");
 const clearBtn = document.querySelector(".clear-btn");
 const grid = document.querySelector(".grid");
 const gridSize = document.querySelector(".grid-size");
+const sizeSlider = document.querySelector(".size-slider");
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value);
 clearBtn.onclick = () => newGrid();
+sizeSlider.onchange = (e) => changeRange(e.target.value);
 
 function changeRange(newVal) {
   gridSize.innerHTML = "Grid Size: "+ newVal + " x "+ newVal;
