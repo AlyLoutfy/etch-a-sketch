@@ -47,21 +47,11 @@ function setupGrid(size) {
     child.addEventListener('mouseover', changeColor);
     child.addEventListener('mousedown', changeColor);
     grid.append(child);
-  
   }
 }
 
-function changeColor() {
-  const gridBlocks = document.querySelectorAll(".grid-blocks");
-  gridBlocks.forEach(block => {
-    block.addEventListener('mousedown', event => {
-      block.style.backgroundColor = currentColor;
-    })
-  });
+function changeColor(e) {
+  e.target.style.backgroundColor = currentColor;
 }
 
-function init() {
-  newGrid();
-  changeColor();
-}
-init();
+window.onload = () => newGrid();
